@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+</head>
+<body>
+    <div class="flag">
+        <div class="top"></div>
+        <div class="middle">
+            <div class="wheel">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+        <div class="bottom"></div>
+    </div>
+    <script>
+        // GSAP animation
+        gsap.from(".top", {
+            x:1400,
+            duration: 2,
+            ease: "linear"
+        });
+        gsap.from(".bottom", {
+            x:-1400,
+            duration: 2,
+            ease: "linear"
+        });
+        gsap.from(".wheel", {
+            rotation: 360,
+            delay:2,
+            opacity:0,
+            duration: 5,
+            repeat:1,
+            ease: "linear"
+        });
+    </script>
+</body>
+</html>
